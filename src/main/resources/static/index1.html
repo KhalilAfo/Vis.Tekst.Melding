@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function innKlikk(innData) {
+            let utData = "Du har skrevet inn følgende data: "+innData;
+            alert(utData);
+        }
+        function klikkKnapp() {
+            alert("Knappen er kikket!");
+        }
+        function klikkDiv() {
+            alert("Div er kikket!");
+            console.log("Etter alert inne i kikkDiv!");
+        }
+    </script>
+</head>
+<body>
+<input type="text" onchange="innKlikk(this.value);"/><br />
+
+<input type="button" value="Trykk meg" onclick="klikkKnapp();"/>
+
+<div onclick="klikkDiv();">Trykk meg</div>
+
+<div onmouseover="style.color='blue';" onmouseout="style.color='black';">
+    Rør ved meg!
+</div>
+
+</body>
+</html>
